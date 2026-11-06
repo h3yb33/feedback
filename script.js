@@ -15,15 +15,15 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   const data = new FormData(form);
 const { error } = await db.from("feedback_form").insert({
   name: data.get("name"),
+  email: data.get("email"),
   message: data.get("message"),
-  rating: Number(data.get("rating")),
 });
   alert(error ? "Something went wrong" : "Thank you for your feedback!");
   alert(error ? error.message : "Thank you for your feedback!");
 });
 form.addEventListener("change", (event) => {
-    if (event.target.name === "rating") {
-        ratingFeedback.textContent = ratingMessages[Number(event.target.value) - 1];
+    if (event.target.name === "message") {
+        ratingFeedback.textContent = ratingMessages[message];
     }
     formStatus.textContent = "";
 });
