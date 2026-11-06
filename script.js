@@ -19,7 +19,7 @@ const { error } = await db.from("feedback_form").insert({
   rating: Number(data.get("rating")),
 });
   alert(error ? "Something went wrong" : "Thank you for your feedback!");
-  if (!error) e.target.reset();
+  alert(error ? error.message : "Thank you for your feedback!");
 });
 form.addEventListener("change", (event) => {
     if (event.target.name === "rating") {
