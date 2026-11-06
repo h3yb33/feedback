@@ -5,9 +5,21 @@ const ratingFeedback = document.querySelector("#rating-feedback");
 const formContent = document.querySelector("#form-content");
 const successPanel = document.querySelector("#success-panel");
 const formStatus = document.querySelector("#form-status");
-const ratingMessages = ["Sorry to hear that", "Could be better", "It was okay", "Pretty good", "Loved it"];
 message.addEventListener("input", () => {
     characterCount.textContent = `${message.value.length} / ${message.maxLength}`;
+});
+const db = supabase.createClient("https://ckghzgvllutzhkbnwrfs.supabase.co", "sb_publishable_tlCwTgc5dQVYW2FMA6yqmA_iF7EE_t2");
+
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+const { error } = await db.from("feedback_form").insert({
+  name: data.get("name"),
+  message: data.get("message"),
+  rating: Number(data.get("rating")),
+});
+  alert(error ? "Something went wrong" : "Thank you for your feedback!");
+  if (!error) e.target.reset();
 });
 form.addEventListener("change", (event) => {
     if (event.target.name === "rating") {
