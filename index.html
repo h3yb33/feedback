@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10172a">
+    <title>Share your feedback</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <main class="layout">
+        <section class="intro" aria-labelledby="page-title">
+            <div class="brand">
+                <img src="images/bilaad-logo-scaled.png" alt="bilaad-logo" srcset="">
+            </div>
+
+            <div class="intro-copy">
+                <p class="eyebrow">Your voice matters</p>
+                <h1 id="page-title">Help us make things better.</h1>
+                <p>Every note helps us create a better experience. Tell us what you think, we’re listening.</p>
+            </div>
+
+            <p class="privacy-note">
+                <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3 5 6v5c0 4.7 3 8 7 10 4-2 7-5.3 7-10V6l-7-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                    <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Your feedback is only used to improve your experience.
+            </p>
+        </section>
+
+        <section class="form-panel" aria-labelledby="form-title">
+            <div id="form-content">
+                <h2 id="form-title">Send us a note</h2>
+                <p class="form-description">A few details and you’re all set. Fields marked with * are required.</p>
+
+                <form id="feedback-form">
+                    <div class="field">
+                        <label for="name">Your name <span aria-hidden="true">*</span></label>
+                        <input id="name" name="name" type="text" placeholder="e.g. Alex Morgan" autocomplete="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email address <span aria-hidden="true">*</span></label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                    </div>
+
+                    <fieldset class="rating">
+                        <legend class="rating-title">How was your experience? <span class="optional">(optional)</span></legend>
+                        <div class="rating-options">
+                            <span class="rating-option">
+                                <input id="rating-1" type="radio" name="rating" value="1" aria-label="1 out of 5">
+                                <label for="rating-1" title="1 out of 5">★</label>
+                            </span>
+                            <span class="rating-option">
+                                <input id="rating-2" type="radio" name="rating" value="2" aria-label="2 out of 5">
+                                <label for="rating-2" title="2 out of 5">★</label>
+                            </span>
+                            <span class="rating-option">
+                                <input id="rating-3" type="radio" name="rating" value="3" aria-label="3 out of 5">
+                                <label for="rating-3" title="3 out of 5">★</label>
+                            </span>
+                            <span class="rating-option">
+                                <input id="rating-4" type="radio" name="rating" value="4" aria-label="4 out of 5">
+                                <label for="rating-4" title="4 out of 5">★</label>
+                            </span>
+                            <span class="rating-option">
+                                <input id="rating-5" type="radio" name="rating" value="5" aria-label="5 out of 5">
+                                <label for="rating-5" title="5 out of 5">★</label>
+                            </span>
+                        </div>
+                        <p id="rating-feedback" class="rating-feedback" aria-live="polite"></p>
+                    </fieldset>
+
+                    <div class="field">
+                        <label for="message">Your feedback <span aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" placeholder="What’s on your mind?" maxlength="500" required></textarea>
+                        <div class="message-meta"><span id="character-count" aria-live="polite">0 / 500</span></div>
+                    </div>
+
+                    <button class="submit-button" type="submit">
+                        Send feedback
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="form-footer">Thanks for taking a moment to help us improve.</p>
+            </div>
+
+            <div id="success-panel" class="success-panel" role="status" aria-live="polite">
+                <span class="success-icon" aria-hidden="true">✓</span>
+                <h2>Thank you, <span id="success-name">there</span>!</h2>
+                <p>Your feedback has been recorded in this demo. We appreciate you helping us get better.</p>
+                <button id="send-another" class="reset-button" type="button">Send another response</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
