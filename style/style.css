@@ -149,8 +149,7 @@
     .field {
         margin-bottom: 20px;
     }
-    .field label,
-    .rating-title {
+    .field label {
         display: block;
         margin-bottom: 8px;
         color: #283247;
@@ -197,59 +196,6 @@
         border-color: #6758d4;
         background: #fdfcff;
         box-shadow: 0 0 0 3px rgba(103, 88, 212, 0.13);
-    }
-    .rating {
-        margin: 0 0 20px;
-        padding: 0;
-        border: 0;
-    }
-    .rating-title {
-        margin-bottom: 10px;
-    }
-    .rating-options {
-        display: flex;
-        gap: 8px;
-    }
-    .rating-option {
-        position: relative;
-    }
-    .rating-option input {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-    }
-    .rating-option label {
-        display: grid;
-        width: 44px;
-        height: 42px;
-        place-items: center;
-        border: 1px solid #e4e7ee;
-        border-radius: 10px;
-        color: #8b93a2;
-        cursor: pointer;
-        font-size: 23px;
-        transition: color 150ms ease, background 150ms ease, border-color 150ms ease, transform 150ms ease;
-    }
-    .rating-option label:hover {
-        transform: translateY(-2px);
-        border-color: #b3893c;
-        color: #b3893e;
-    }
-    .rating-option input:checked + label {
-        border-color: #b3893e;
-        background: #fff;
-        color: #b3893e;
-    }
-    .rating-option input:focus-visible + label {
-        outline: 3px solid white;
-        outline-offset: 2px;
-    }
-    .rating-feedback {
-        min-height: 18px;
-        margin: 8px 0 0;
-        color: #4d4d4d;
-        font-size: 12px;
     }
     .message-meta {
         display: flex;
