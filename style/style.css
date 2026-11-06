@@ -72,6 +72,13 @@
         font-weight: 700;
         letter-spacing: 0.02em;
     }
+    .brand img {
+        display: block;
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        object-fit: contain;
+    }
     .brand-mark {
         display: grid;
         width: 34px;
