@@ -12,15 +12,6 @@ const db = supabase.createClient("https://ckghzgvllutzhkbnwrfs.supabase.co", "sb
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const data = new FormData(form);
-const { error } = await db.from("feedback_form").insert({
-  name: data.get("name"),
-  email: data.get("email"),
-  message: data.get("message"),
-});
-  alert(error ? "Something went wrong" : "Thank you for your feedback!");
-  alert(error ? error.message : "Thank you for your feedback!");
-});
 form.addEventListener("change", (event) => {
     if (event.target.name === "message") {
         ratingFeedback.textContent = ratingMessages[message];
