@@ -8,10 +8,6 @@ const formStatus = document.querySelector("#form-status");
 message.addEventListener("input", () => {
     characterCount.textContent = `${message.value.length} / ${message.maxLength}`;
 });
-const db = supabase.createClient("https://ckghzgvllutzhkbnwrfs.supabase.co", "sb_publishable_tlCwTgc5dQVYW2FMA6yqmA_iF7EE_t2");
-
-document.querySelector("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
 form.addEventListener("change", (event) => {
     if (event.target.name === "message") {
         ratingFeedback.textContent = ratingMessages[message];
