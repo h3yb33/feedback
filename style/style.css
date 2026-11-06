@@ -76,6 +76,7 @@
         display: grid;
         width: 34px;
         height: 34px;
+        color: #b3893e;
         place-items: center;
         border: 1px solid rgba(255, 255, 255, 0.35);
         border-radius: 11px;
@@ -128,6 +129,7 @@
     }
     .form-panel h2 {
         margin: 0;
+        color: #283247;
         font-size: 25px;
         letter-spacing: -0.035em;
     }
@@ -320,7 +322,7 @@
         border: 1px solid #dfe4ec;
         border-radius: 9px;
         background: #fff;
-        color: #5146b8;
+        color: #b3893d;
         cursor: pointer;
         font: inherit;
         font-size: 13px;
