@@ -5,12 +5,13 @@ const ratingFeedback = document.querySelector("#rating-feedback");
 const formContent = document.querySelector("#form-content");
 const successPanel = document.querySelector("#success-panel");
 const formStatus = document.querySelector("#form-status");
+const ratingMessages = ["Sorry to hear that", "Could be better", "It was okay", "Pretty good", "Loved it"];
 message.addEventListener("input", () => {
     characterCount.textContent = `${message.value.length} / ${message.maxLength}`;
 });
 form.addEventListener("change", (event) => {
-    if (event.target.name === "message") {
-        ratingFeedback.textContent = ratingMessages[message];
+    if (event.target.name === "rating") {
+        ratingFeedback.textContent = ratingMessages[Number(event.target.value) - 1];
     }
     formStatus.textContent = "";
 });
