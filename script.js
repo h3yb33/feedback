@@ -32,7 +32,7 @@ form.addEventListener("submit", (event) => {
 document.querySelector("#send-another").addEventListener("click", () => {
     form.reset();
     characterCount.textContent = `0 / ${message.maxLength}`;
-    ratingFeedback.textContent = "";
+    // ratingFeedback.textContent = "";
     formStatus.textContent = "";
     successPanel.classList.remove("is-visible");
     formContent.hidden = false;
